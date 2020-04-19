@@ -1,0 +1,28 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Ghibli Films</title>
+</head>
+<body>
+    <h1>Ghibli API</h1>
+    <div id="demoApp" class="grid">
+        <div v-for="film in films" v-bind:key="film.id" class="grid-item">
+            <h2>{{film.title}}</h2>
+
+        <div class="info">
+            <p>{{film.director}}</p>
+            <p>{{film.release_date}}</p>
+            <p>{{film.description}}</p>
+            <p>Rotten Tomato Score: {{film.rt_score}}</p>
+        </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
